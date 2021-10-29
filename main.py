@@ -86,6 +86,15 @@ class RegisterWindow(Screen):
 
         connection = create_db_connection("localhost", "Samsamsam", "suckySucky10bucky_", "chat_db")
         execute_query(connection, pop_users, user_input)
+        self.first_namee.text = ""
+        self.last_namee.text = ""
+        self.username.text = ""
+        self.password.text = ""
+        sm.current = "login"
+
+    def goback(self):
+        sm.current = "login"
+
 
 """
     def submit(self):
